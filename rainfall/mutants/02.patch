@@ -1,0 +1,11 @@
+--- a/rainfall.py
++++ b/rainfall.py
+@@ -7,7 +7,7 @@
+ 
+ 
+ def chk(d, t):
+-    return [i for i, x in enumerate(d) if x > t]
++    return [i for i, x in enumerate(d) if x >= t]
+ 
+ 
+ def go(d, n, t):

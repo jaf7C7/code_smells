@@ -1,0 +1,11 @@
+--- a/discounts.js
++++ b/discounts.js
+@@ -12,7 +12,7 @@
+ 
+ function discountFor(customer) {
+   const now = today();
+-  if (customer.birthMonth === now.getUTCMonth() + 1) {
++  if (customer.birthMonth === now.getUTCMonth()) {
+     return 0.2;
+   }
+   if (customer.member && isWeekend(now)) {

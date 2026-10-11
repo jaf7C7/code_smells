@@ -1,0 +1,11 @@
+--- a/scaler.js
++++ b/scaler.js
+@@ -6,7 +6,7 @@
+   const factor = servings / recipe.serves;
+   return {
+     ...recipe,
+-    serves: servings,
++    
+     ingredients: recipe.ingredients.map((ingredient) => ({
+       ...ingredient,
+       quantity: roundQuantity(ingredient.quantity * factor),

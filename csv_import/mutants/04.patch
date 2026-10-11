@@ -1,0 +1,11 @@
+--- a/importer.js
++++ b/importer.js
+@@ -20,7 +20,7 @@
+   }
+ 
+   total(column) {
+-    return this.rows().reduce((sum, row) => sum + Number(row[column]), 0);
++    return this.rows().reduce((sum, row) => sum + row[column], 0);
+   }
+ }
+ 

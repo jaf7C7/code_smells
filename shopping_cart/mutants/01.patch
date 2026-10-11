@@ -1,0 +1,11 @@
+--- a/cart.js
++++ b/cart.js
+@@ -9,7 +9,7 @@
+   add(name, unitPrice, quantity = 1) {
+     const line = this.lines.get(name);
+     if (line) {
+-      line.quantity += quantity;
++      line.quantity = quantity;
+     } else {
+       this.lines.set(name, { unitPrice, quantity });
+     }

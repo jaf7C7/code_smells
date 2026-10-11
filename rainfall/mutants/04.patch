@@ -1,0 +1,8 @@
+--- a/rainfall.py
++++ b/rainfall.py
+@@ -12,4 +12,4 @@
+ 
+ def go(d, n, t):
+     a = proc(d, n)
+-    return {"avg": a, "hi": chk(a, t)}
++    return {"avg": a, "hi": chk(d, t)}

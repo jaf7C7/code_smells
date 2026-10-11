@@ -1,0 +1,11 @@
+--- a/playlist.js
++++ b/playlist.js
+@@ -17,7 +17,7 @@
+     if (index === -1) {
+       return;
+     }
+-    this.totalSeconds -= this.tracks[index].seconds;
++    
+     this.tracks.splice(index, 1);
+   }
+ 

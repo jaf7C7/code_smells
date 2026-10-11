@@ -1,0 +1,11 @@
+--- a/tickets.js
++++ b/tickets.js
+@@ -13,7 +13,7 @@
+   const ticketsTotal = unitPrice * quantity * (1 - discount);
+   const insuranceTotal = insured ? 2.5 * quantity : 0;
+   return {
+-    confirmation: `${customerName} <${customerEmail}>: ${quantity} x ${section} for ${eventName} at ${venue} on ${eventDate}`,
++    confirmation: `${customerName} <${customerEmail}>: ${quantity} x ${section} for ${eventName} at ${eventName} on ${eventDate}`,
+     total: Math.round((ticketsTotal + insuranceTotal) * 100) / 100,
+   };
+ }

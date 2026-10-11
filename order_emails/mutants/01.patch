@@ -1,0 +1,10 @@
+--- a/receipt.py
++++ b/receipt.py
+@@ -1,6 +1,6 @@
+ FREE_DELIVERY_FROM = 40
+ DELIVERY_CHARGE = 3.99
+-MEMBER_DISCOUNT = 0.1
++MEMBER_DISCOUNT = 0.15
+ 
+ 
+ def receipt_email(order):

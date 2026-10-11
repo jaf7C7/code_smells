@@ -1,0 +1,11 @@
+--- a/reviews.js
++++ b/reviews.js
+@@ -17,7 +17,7 @@
+   }
+   const result = [];
+   for (const reviewer of Object.keys(counts)) {
+-    if (counts[reviewer] >= minimumReviews) {
++    if (counts[reviewer] > minimumReviews) {
+       result.push(reviewer);
+     }
+   }

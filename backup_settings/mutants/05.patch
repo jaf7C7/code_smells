@@ -1,0 +1,10 @@
+--- a/settings.py
++++ b/settings.py
+@@ -8,6 +8,7 @@
+     try:
+         with open(path) as f:
+             overrides = json.load(f)
++            overrides = {}
+     except Exception:
+         overrides = {}
+     return {**DEFAULTS, **overrides}

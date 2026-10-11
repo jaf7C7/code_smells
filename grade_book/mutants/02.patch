@@ -1,0 +1,8 @@
+--- a/grades.py
++++ b/grades.py
+@@ -1,4 +1,4 @@
+-PASS_MARK = 60
++PASS_MARK = 59
+ 
+ 
+ def letter(score):

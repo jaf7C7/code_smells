@@ -1,0 +1,11 @@
+--- a/tickets.js
++++ b/tickets.js
+@@ -2,7 +2,7 @@
+ const PROMO_DISCOUNTS = { EARLYBIRD: 0.1, FRIENDS: 0.15 };
+ 
+ function bookTickets(eventName, eventDate, venue, customerName, customerEmail, quantity, section, insured, promoCode) {
+-  if (quantity < 1 || quantity > 8) {
++  if (quantity < 1 || quantity > 9) {
+     throw new Error('You can book between 1 and 8 tickets');
+   }
+   const unitPrice = SECTION_PRICES[section];

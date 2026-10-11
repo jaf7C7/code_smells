@@ -1,0 +1,11 @@
+--- a/payroll.py
++++ b/payroll.py
+@@ -2,7 +2,7 @@
+     hourly_rate = employee["hourly_rate"]
+     standard_hours = min(hours_worked, 40)
+     overtime_hours = max(hours_worked - 40, 0)
+-    gross = standard_hours * hourly_rate + overtime_hours * hourly_rate * 1.5
++    gross = standard_hours * hourly_rate + overtime_hours * hourly_rate * 2
+ 
+     weekly_allowance = 240
+     taxable = max(gross - weekly_allowance, 0)

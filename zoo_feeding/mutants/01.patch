@@ -1,0 +1,11 @@
+--- a/zoo.py
++++ b/zoo.py
+@@ -10,7 +10,7 @@
+ 
+ def daily_food_kg(animal):
+     if animal.species == "lion":
+-        return round(animal.weight_kg * 0.05, 1)
++        return round(animal.weight_kg * 0.04, 1)
+     elif animal.species == "penguin":
+         return 1.5
+     elif animal.species == "giraffe":

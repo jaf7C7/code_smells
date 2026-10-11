@@ -1,0 +1,9 @@
+--- a/units.py
++++ b/units.py
+@@ -22,5 +22,5 @@
+ 
+ def format_weight(kilograms):
+     total_pounds = round(POUNDS_PER_KILOGRAM.apply(kilograms))
+-    stones, pounds = divmod(total_pounds, 14)
++    stones, pounds = divmod(total_pounds, 16)
+     return f"{stones} st {pounds} lb"

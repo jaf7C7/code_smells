@@ -1,0 +1,11 @@
+--- a/reports.py
++++ b/reports.py
+@@ -2,7 +2,7 @@
+ 
+ 
+ def pages_printed():
+-    return sum(job["pages"] for job in printing.completed)
++    return len(printing.completed)
+ 
+ 
+ def waiting_documents():

@@ -1,0 +1,50 @@
+CODE SMELLS -- REVIEW CHECKLIST
+===============================
+
+Fowler, Refactoring (2nd ed., 2018) -- the core 24
+--------------------------------------------------
+Mysterious Name
+Duplicated Code
+Long Function
+Long Parameter List
+Global Data
+Mutable Data
+Divergent Change
+Shotgun Surgery
+Feature Envy
+Data Clumps
+Primitive Obsession
+Repeated Switches
+Loops
+Lazy Element
+Speculative Generality
+Temporary Field
+Message Chains
+Middle Man
+Insider Trading
+Large Class
+Alternative Classes with Different Interfaces
+Data Class
+Refused Bequest
+Comments
+
+
+Additions not covered above
+---------------------------
+Dead Code                 (Wake; Martin G9)
+Flag Arguments            (Martin F3)
+Hidden Temporal Coupling  (Martin G31)
+Swallowed Exceptions      (folklore)
+
+
+Test smells (Meszaros; van Deursen et al.)
+------------------------------------------
+Obscure Test
+Mystery Guest
+Eager Test
+Assertion Roulette
+Conditional Test Logic
+Fragile Test
+Erratic Test
+Slow Tests
+Test Logic in Production

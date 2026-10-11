@@ -1,0 +1,10 @@
+--- a/tariff.py
++++ b/tariff.py
+@@ -1,6 +1,6 @@
+ import math
+ 
+-GRACE_MINUTES = 10
++GRACE_MINUTES = 5
+ 
+ 
+ class Tariff:

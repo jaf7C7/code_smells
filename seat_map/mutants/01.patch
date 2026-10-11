@@ -1,0 +1,11 @@
+--- a/seats.js
++++ b/seats.js
+@@ -7,7 +7,7 @@
+   }
+ 
+   label(row, seat) {
+-    return `${String.fromCharCode(65 + row)}${seat}`;
++    return `${String.fromCharCode(66 + row)}${seat}`;
+   }
+ 
+   allSeats() {

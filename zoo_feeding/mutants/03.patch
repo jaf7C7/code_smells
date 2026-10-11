@@ -1,0 +1,11 @@
+--- a/zoo.py
++++ b/zoo.py
+@@ -32,7 +32,7 @@
+     if animal.species == "lion":
+         return (20, 35)
+     elif animal.species == "penguin":
+-        return (0, 8)
++        return (0, 10)
+     elif animal.species == "giraffe":
+         return (15, 30)
+     raise ValueError(f"Unknown species: {animal.species}")

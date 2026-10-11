@@ -1,0 +1,11 @@
+--- a/receipt.py
++++ b/receipt.py
+@@ -7,7 +7,7 @@
+     lines = [f"Hi {order['customer']},", "", "Thanks for your order. Here's what you bought:", ""]
+     subtotal = 0
+     for item in order["items"]:
+-        line_total = item["qty"] * item["price"]
++        line_total = item["price"]
+         subtotal += line_total
+         lines.append(f"  {item['qty']} x {item['name']:<16} £{line_total:>7.2f}")
+     discount = subtotal * MEMBER_DISCOUNT if order["member"] else 0

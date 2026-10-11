@@ -1,0 +1,10 @@
+{
+  "name": "book-club",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "29.7.0"
+  }
+}

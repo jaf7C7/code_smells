@@ -1,0 +1,11 @@
+--- a/library.py
++++ b/library.py
+@@ -44,7 +44,7 @@
+         )
+         self.loans.remove(loan)
+         days_late = (today - loan["due"]).days
+-        if days_late > 0:
++        if days_late > 1:
+             self.fines[member_id] += days_late * self.daily_fine
+         return self.fines[member_id]
+ 

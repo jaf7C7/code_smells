@@ -1,0 +1,10 @@
+--- a/billing.py
++++ b/billing.py
+@@ -1,6 +1,6 @@
+ from datetime import timedelta
+ 
+-PAYMENT_TERMS_DAYS = 30
++PAYMENT_TERMS_DAYS = 28
+ 
+ 
+ def add_line(invoice, description, quantity, unit_price):

@@ -1,0 +1,11 @@
+--- a/settings.py
++++ b/settings.py
+@@ -10,7 +10,7 @@
+             overrides = json.load(f)
+     except Exception:
+         overrides = {}
+-    return {**DEFAULTS, **overrides}
++    return {**overrides, **DEFAULTS}
+ 
+ 
+ def next_run(last_run, settings):

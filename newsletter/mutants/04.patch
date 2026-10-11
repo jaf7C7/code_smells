@@ -1,0 +1,9 @@
+--- a/newsletter.py
++++ b/newsletter.py
+@@ -14,5 +14,5 @@
+         recipients = subscribers
+         subject = issue["title"]
+     for subscriber in recipients:
+-        body = render(issue, subscriber["wants_html"])
++        body = render(issue, True)
+         outbox.append((subscriber["email"], subject, body))

@@ -1,0 +1,11 @@
+--- a/library.py
++++ b/library.py
+@@ -53,7 +53,7 @@
+ 
+     def send_overdue_reminders(self, today):
+         for loan in self.loans:
+-            if loan["due"] < today:
++            if loan["due"] <= today + timedelta(days=5):
+                 member = self.members[loan["member_id"]]
+                 title = self.books[loan["isbn"]]["title"]
+                 self.outbox.append((member["email"], f"Dear {member['name']}, '{title}' was due on {loan['due']}."))

@@ -1,0 +1,11 @@
+--- a/billing.py
++++ b/billing.py
+@@ -16,7 +16,7 @@
+ 
+ 
+ def is_overdue(invoice, today):
+-    return not invoice.paid and today > due_date(invoice)
++    return today > due_date(invoice)
+ 
+ 
+ def mark_paid(invoice):

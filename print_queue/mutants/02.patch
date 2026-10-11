@@ -1,0 +1,8 @@
+--- a/priority.py
++++ b/priority.py
+@@ -2,4 +2,4 @@
+ 
+ 
+ def submit_urgent(document, pages):
+-    printing.pending.insert(0, {"document": document, "pages": pages})
++    printing.pending.append({"document": document, "pages": pages})

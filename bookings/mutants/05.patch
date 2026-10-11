@@ -1,0 +1,8 @@
+--- a/reception.py
++++ b/reception.py
+@@ -15,4 +15,4 @@
+         return self._calendar.who_has(day, hour)
+ 
+     def free_hours(self, day, opening, closing):
+-        return self._calendar.free_hours(day, opening, closing)
++        return self._calendar.free_hours(day, opening + 1, closing)

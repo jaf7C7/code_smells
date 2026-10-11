@@ -1,0 +1,10 @@
+--- a/printing.py
++++ b/printing.py
+@@ -7,6 +7,6 @@
+ 
+ 
+ def print_next():
+-    job = pending.pop(0)
++    job = pending.pop()
+     completed.append(job)
+     return job["document"]

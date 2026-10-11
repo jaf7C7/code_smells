@@ -1,0 +1,11 @@
+--- a/labels.js
++++ b/labels.js
+@@ -15,7 +15,7 @@
+ }
+ 
+ function invoiceLabel(order) {
+-  return formatLabel(order.recipient, order.billingStreet, order.billingCity, order.billingPostcode);
++  return formatLabel(order.recipient, order.deliveryStreet, order.billingCity, order.billingPostcode);
+ }
+ 
+ function needsSeparateInvoice(order) {

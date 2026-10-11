@@ -1,0 +1,11 @@
+--- a/reviews.js
++++ b/reviews.js
+@@ -3,7 +3,7 @@
+   let count = 0;
+   for (const review of reviews) {
+     if (review.title === title) {
+-      total += review.stars;
++      total = review.stars;
+       count += 1;
+     }
+   }

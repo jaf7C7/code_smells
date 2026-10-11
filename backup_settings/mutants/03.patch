@@ -1,0 +1,8 @@
+--- a/settings.py
++++ b/settings.py
+@@ -26,4 +26,4 @@
+         keep = int(settings["keep"])
+     except Exception:
+         return []
+-    return sorted(backups)[:-keep] if keep > 0 else sorted(backups)
++    return sorted(backups)[keep:] if keep > 0 else sorted(backups)

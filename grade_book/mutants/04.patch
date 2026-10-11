@@ -1,0 +1,11 @@
+--- a/grades.py
++++ b/grades.py
+@@ -28,7 +28,7 @@
+             "count": len(scores),
+             "mean": round(sum(scores) / len(scores), 2),
+             "highest": max(scores),
+-            "lowest": min(scores),
++            "lowest": scores[-1],
+             "passed": sum(1 for score in scores if score >= PASS_MARK),
+         }
+ 

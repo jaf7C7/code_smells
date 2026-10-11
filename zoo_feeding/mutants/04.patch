@@ -1,0 +1,11 @@
+--- a/zoo.py
++++ b/zoo.py
+@@ -25,7 +25,7 @@
+         return ["09:00", "13:00", "17:00"]
+     elif animal.species == "giraffe":
+         return ["08:00", "15:00"]
+-    raise ValueError(f"Unknown species: {animal.species}")
++    return []
+ 
+ 
+ def enclosure_temperature_c(animal):

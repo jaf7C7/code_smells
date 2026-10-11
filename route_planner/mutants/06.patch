@@ -1,0 +1,11 @@
+--- a/planner.py
++++ b/planner.py
+@@ -7,7 +7,7 @@
+ 
+     def plan(self, stops):
+         self._remaining = list(stops)
+-        self._current = self.depot
++        self._current = self._current or self.depot
+         self._route = []
+         while self._remaining:
+             nearest = min(self._remaining, key=self._distance_from_current)

@@ -1,0 +1,10 @@
+--- a/rainfall.py
++++ b/rainfall.py
+@@ -1,6 +1,6 @@
+ def proc(d, n):
+     r = []
+-    for i in range(len(d) - n + 1):
++    for i in range(len(d) - n):
+         w = d[i:i + n]
+         r.append(sum(w) / n)
+     return r

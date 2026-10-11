@@ -1,0 +1,11 @@
+--- a/playlist.js
++++ b/playlist.js
+@@ -9,7 +9,7 @@
+ 
+   add(track) {
+     this.tracks.push(track);
+-    this.totalSeconds += track.seconds;
++    this.totalSeconds -= track.seconds;
+   }
+ 
+   remove(title) {

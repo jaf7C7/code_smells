@@ -1,0 +1,11 @@
+--- a/planner.py
++++ b/planner.py
+@@ -13,7 +13,7 @@
+             nearest = min(self._remaining, key=self._distance_from_current)
+             self._route.append(nearest)
+             self._remaining.remove(nearest)
+-            self._current = nearest
++            self._current = self.depot
+         return self._route
+ 
+     def _distance_from_current(self, stop):

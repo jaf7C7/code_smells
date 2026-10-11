@@ -1,0 +1,11 @@
+--- a/duty.py
++++ b/duty.py
+@@ -35,7 +35,7 @@
+     # people buying an additional property pay an extra 3% of the
+     # whole price on top
+     if buyer["owns_other_property"]:
+-        tax += price * 0.03
++        tax += price * 0.05
+ 
+     # round down to the pound
+     return int(tax)

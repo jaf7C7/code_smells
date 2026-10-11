@@ -1,0 +1,9 @@
+--- a/thermostat.js
++++ b/thermostat.js
+@@ -1,5 +1,5 @@
+ const MODES = ['heat', 'cool', 'off'];
+-const HYSTERESIS = 0.5;
++const HYSTERESIS = 1;
+ const MAX_TARGET = 30;
+ 
+ function celsiusToFahrenheit(celsius) {

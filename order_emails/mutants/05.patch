@@ -1,0 +1,10 @@
+--- a/receipt.py
++++ b/receipt.py
+@@ -16,6 +16,6 @@
+     if discount:
+         lines.append(f"  {'Member discount':<20}-£{discount:>7.2f}")
+     lines.append(f"  {'Delivery':<20} £{delivery:>7.2f}")
+-    lines.append(f"  {'Total':<20} £{subtotal - discount + delivery:>7.2f}")
++    lines.append(f"  {'Total':<20} £{subtotal + delivery:>7.2f}")
+     lines += ["", "See you soon,", "The Corner Shop"]
+     return "\n".join(lines)

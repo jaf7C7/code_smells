@@ -1,0 +1,11 @@
+--- a/planner.py
++++ b/planner.py
+@@ -6,7 +6,7 @@
+         self._route = None
+ 
+     def plan(self, stops):
+-        self._remaining = list(stops)
++        self._remaining = stops
+         self._current = self.depot
+         self._route = []
+         while self._remaining:

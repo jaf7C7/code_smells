@@ -1,0 +1,11 @@
+--- a/units.py
++++ b/units.py
+@@ -6,7 +6,7 @@
+         return value * self.factor
+ 
+ 
+-FEET_PER_METRE = Multiplier(3.28084)
++FEET_PER_METRE = Multiplier(3.0)
+ POUNDS_PER_KILOGRAM = Multiplier(2.20462)
+ 
+ 

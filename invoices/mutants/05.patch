@@ -1,0 +1,11 @@
+--- a/billing.py
++++ b/billing.py
+@@ -20,7 +20,7 @@
+ 
+ 
+ def mark_paid(invoice):
+-    invoice.paid = True
++    invoice.paid = False
+ 
+ 
+ def summary(invoice):

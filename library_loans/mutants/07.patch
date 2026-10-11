@@ -1,0 +1,11 @@
+--- a/library.py
++++ b/library.py
+@@ -35,7 +35,7 @@
+         if self.available_copies(isbn) == 0:
+             raise ValueError("No copies available")
+         self.loans.append({"isbn": isbn, "member_id": member_id, "due": today + timedelta(days=self.loan_days)})
+-        self.times_borrowed[isbn] += 1
++        self.times_borrowed[isbn] = 1
+ 
+     def return_book(self, isbn, member_id, today):
+         loan = next(

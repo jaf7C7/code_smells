@@ -1,0 +1,11 @@
+--- a/playlist.js
++++ b/playlist.js
+@@ -14,7 +14,7 @@
+ 
+   remove(title) {
+     const index = this.tracks.findIndex((track) => track.title === title);
+-    if (index === -1) {
++    if (index === -2) {
+       return;
+     }
+     this.totalSeconds -= this.tracks[index].seconds;

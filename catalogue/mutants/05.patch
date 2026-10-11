@@ -1,0 +1,10 @@
+--- a/collection.js
++++ b/collection.js
+@@ -1,6 +1,6 @@
+ class Collection {
+   constructor(items = []) {
+-    this.items = [...items];
++    this.items = items.slice(1);
+   }
+ 
+   add(item) {

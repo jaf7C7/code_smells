@@ -1,0 +1,11 @@
+--- a/tickets.js
++++ b/tickets.js
+@@ -10,7 +10,7 @@
+     throw new Error(`Unknown section: ${section}`);
+   }
+   const discount = PROMO_DISCOUNTS[promoCode] ?? 0;
+-  const ticketsTotal = unitPrice * quantity * (1 - discount);
++  const ticketsTotal = unitPrice * quantity * (1 + discount);
+   const insuranceTotal = insured ? 2.5 * quantity : 0;
+   return {
+     confirmation: `${customerName} <${customerEmail}>: ${quantity} x ${section} for ${eventName} at ${venue} on ${eventDate}`,

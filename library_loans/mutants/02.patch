@@ -1,0 +1,11 @@
+--- a/library.py
++++ b/library.py
+@@ -30,7 +30,7 @@
+         return self.books[isbn]["copies"] - on_loan
+ 
+     def lend(self, isbn, member_id, today):
+-        if self.fines[member_id] > 0:
++        if self.fines[member_id] > 1:
+             raise ValueError("Member has unpaid fines")
+         if self.available_copies(isbn) == 0:
+             raise ValueError("No copies available")

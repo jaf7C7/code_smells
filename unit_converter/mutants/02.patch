@@ -1,0 +1,11 @@
+--- a/units.py
++++ b/units.py
+@@ -3,7 +3,7 @@
+         self.factor = factor
+ 
+     def apply(self, value):
+-        return value * self.factor
++        return value / self.factor * 10
+ 
+ 
+ FEET_PER_METRE = Multiplier(3.28084)

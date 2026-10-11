@@ -1,0 +1,11 @@
+--- a/notifier.js
++++ b/notifier.js
+@@ -39,7 +39,7 @@
+   }
+ 
+   notify(recipient, text, metadata = {}) {
+-    if (!recipient.email) {
++    if (!recipient.name) {
+       throw new Error('Recipient has no email address');
+     }
+     const formatted = this.formatter(text, metadata);

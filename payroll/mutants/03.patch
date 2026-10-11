@@ -1,0 +1,11 @@
+--- a/payroll.py
++++ b/payroll.py
+@@ -13,7 +13,7 @@
+         income_tax = basic_band * 0.2 + (taxable - basic_band) * 0.4
+ 
+     insurance_threshold = 242
+-    national_insurance = max(gross - insurance_threshold, 0) * 0.12
++    national_insurance = max(gross - insurance_threshold, 0) * 0.1
+ 
+     pension = 0
+     if employee["pension_opt_in"]:

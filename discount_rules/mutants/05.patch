@@ -1,0 +1,11 @@
+--- a/discounts.js
++++ b/discounts.js
+@@ -25,7 +25,7 @@
+ }
+ 
+ function priceFor(customer, amount) {
+-  return Math.round(amount * (1 - discountFor(customer)) * 100) / 100;
++  return Math.round(amount * (1 - discountFor(customer) / 2) * 100) / 100;
+ }
+ 
+ module.exports = { discountFor, priceFor };

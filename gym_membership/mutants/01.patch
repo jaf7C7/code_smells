@@ -1,0 +1,11 @@
+--- a/gym.py
++++ b/gym.py
+@@ -19,7 +19,7 @@
+         self.vat_rate = vat_rate
+ 
+     def monthly_charge(self, member, today):
+-        extra_visits = max(member.visits_this_month - member.included_visits, 0)
++        extra_visits = member.visits_this_month - member.included_visits
+         charge = member.monthly_fee + extra_visits * member.extra_visit_fee
+         if (today - member.joined).days >= 3 * 365:
+             charge *= 0.9

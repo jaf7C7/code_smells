@@ -1,0 +1,11 @@
+--- a/seats.js
++++ b/seats.js
+@@ -32,7 +32,7 @@
+   }
+ 
+   freeSeats() {
+-    return this.allSeats().filter((label) => !this.booked.has(label));
++    return this.allSeats().filter((label) => this.booked.has(label) || true);
+   }
+ 
+   isAccessible(label) {

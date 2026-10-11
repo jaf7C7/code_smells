@@ -1,0 +1,10 @@
+--- a/reviews.js
++++ b/reviews.js
+@@ -21,7 +21,6 @@
+       result.push(reviewer);
+     }
+   }
+-  result.sort();
+   return result;
+ }
+ 

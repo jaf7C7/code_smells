@@ -1,0 +1,11 @@
+--- a/reports.py
++++ b/reports.py
+@@ -6,7 +6,7 @@
+ 
+ 
+ def waiting_documents():
+-    return [job["document"] for job in printing.pending]
++    return [job["document"] for job in printing.completed]
+ 
+ 
+ def cancel_all():

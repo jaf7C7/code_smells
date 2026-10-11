@@ -1,0 +1,11 @@
+--- a/reviews.js
++++ b/reviews.js
+@@ -28,7 +28,7 @@
+ function titlesRatedAtLeast(reviews, stars) {
+   const titles = [];
+   for (let i = 0; i < reviews.length; i++) {
+-    if (reviews[i].stars >= stars && !titles.includes(reviews[i].title)) {
++    if (reviews[i].stars >= stars) {
+       titles.push(reviews[i].title);
+     }
+   }

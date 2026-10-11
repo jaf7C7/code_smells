@@ -1,0 +1,9 @@
+--- a/shipping.js
++++ b/shipping.js
+@@ -1,5 +1,5 @@
+ function domesticQuote(parcel) {
+-  const volumetricWeight = (parcel.lengthCm * parcel.widthCm * parcel.heightCm) / 5000;
++  const volumetricWeight = (parcel.lengthCm * parcel.widthCm * parcel.heightCm) / 6000;
+   const chargeableWeight = Math.max(parcel.weightKg, volumetricWeight);
+   let price = 4.5 + chargeableWeight * 1.2;
+   if (parcel.fragile) {

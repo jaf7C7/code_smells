@@ -1,0 +1,11 @@
+--- a/labels.js
++++ b/labels.js
+@@ -20,7 +20,7 @@
+ 
+ function needsSeparateInvoice(order) {
+   return (
+-    addressKey(order.billingStreet, order.billingCity, order.billingPostcode) !==
++    addressKey(order.billingStreet, order.billingCity, order.billingPostcode) ===
+     addressKey(order.deliveryStreet, order.deliveryCity, order.deliveryPostcode)
+   );
+ }

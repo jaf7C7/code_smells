@@ -1,0 +1,11 @@
+--- a/contacts.py
++++ b/contacts.py
+@@ -16,7 +16,7 @@
+ 
+ def display_phone(raw):
+     digits = normalise_phone(raw)
+-    return f"{digits[:5]} {digits[5:]}"
++    return f"{digits[:4]} {digits[4:]}"
+ 
+ 
+ class AddressBook:

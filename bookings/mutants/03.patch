@@ -1,0 +1,8 @@
+--- a/calendar_slots.py
++++ b/calendar_slots.py
+@@ -16,4 +16,4 @@
+         return self._slots.get((day, hour))
+ 
+     def free_hours(self, day, opening, closing):
+-        return [hour for hour in range(opening, closing) if (day, hour) not in self._slots]
++        return [hour for hour in range(opening, closing + 1) if (day, hour) not in self._slots]

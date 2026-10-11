@@ -1,0 +1,11 @@
+--- a/oncall.js
++++ b/oncall.js
+@@ -3,7 +3,7 @@
+   if (engineer.prefers === 'sms') {
+     smsGateway.dispatch({ number: engineer.phone, text: headline });
+   } else {
+-    emailClient.sendEmail(engineer.email, headline, incident.details);
++    emailClient.sendEmail(engineer.email, incident.title, incident.details);
+   }
+ }
+ 

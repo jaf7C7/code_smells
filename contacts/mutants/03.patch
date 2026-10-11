@@ -1,0 +1,11 @@
+--- a/contacts.py
++++ b/contacts.py
+@@ -11,7 +11,7 @@
+ 
+ 
+ def is_mobile(raw):
+-    return normalise_phone(raw).startswith("07")
++    return normalise_phone(raw).startswith("0")
+ 
+ 
+ def display_phone(raw):

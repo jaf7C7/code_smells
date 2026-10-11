@@ -1,0 +1,9 @@
+--- a/labels.js
++++ b/labels.js
+@@ -1,5 +1,5 @@
+ function normalise(part) {
+-  return part.trim().toLowerCase().replace(/\s+/g, ' ');
++  return part.toLowerCase().replace(/\s+/g, ' ');
+ }
+ 
+ function addressKey(street, city, postcode) {

@@ -1,0 +1,9 @@
+--- a/receipt.py
++++ b/receipt.py
+@@ -1,5 +1,5 @@
+ FREE_DELIVERY_FROM = 40
+-DELIVERY_CHARGE = 3.99
++DELIVERY_CHARGE = 4.99
+ MEMBER_DISCOUNT = 0.1
+ 
+ 

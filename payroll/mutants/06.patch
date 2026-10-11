@@ -1,0 +1,11 @@
+--- a/payroll.py
++++ b/payroll.py
+@@ -25,7 +25,7 @@
+         if gross > repayment_threshold:
+             student_loan = (gross - repayment_threshold) * 0.09
+ 
+-    deductions = income_tax + national_insurance + pension + student_loan
++    deductions = income_tax + pension + student_loan
+     net = gross - deductions
+ 
+     lines = [

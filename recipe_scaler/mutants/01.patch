@@ -1,0 +1,11 @@
+--- a/scaler.js
++++ b/scaler.js
+@@ -3,7 +3,7 @@
+ }
+ 
+ function scale(recipe, servings) {
+-  const factor = servings / recipe.serves;
++  const factor = recipe.serves / servings;
+   return {
+     ...recipe,
+     serves: servings,

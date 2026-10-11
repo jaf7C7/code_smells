@@ -1,0 +1,11 @@
+--- a/retry.py
++++ b/retry.py
+@@ -5,7 +5,7 @@
+     pass
+ 
+ 
+-def call_with_retry(operation, attempts=3, base_delay=0.5):
++def call_with_retry(operation, attempts=2, base_delay=0.5):
+     for attempt in range(attempts):
+         try:
+             return operation()

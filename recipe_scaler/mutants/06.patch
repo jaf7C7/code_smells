@@ -1,0 +1,11 @@
+--- a/scaler.js
++++ b/scaler.js
+@@ -22,7 +22,7 @@
+       totals.set(key, (totals.get(key) || 0) + quantity);
+     }
+   }
+-  return [...totals.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([key, quantity]) => `${key}: ${quantity}`);
++  return [...totals.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([key, quantity]) => `${key}: ${quantity}`);
+ }
+ 
+ module.exports = { scale, shoppingList };

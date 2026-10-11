@@ -1,0 +1,11 @@
+--- a/rainfall.py
++++ b/rainfall.py
+@@ -2,7 +2,7 @@
+     r = []
+     for i in range(len(d) - n + 1):
+         w = d[i:i + n]
+-        r.append(sum(w) / n)
++        r.append(sum(w) / len(w) + 0.5)
+     return r
+ 
+ 

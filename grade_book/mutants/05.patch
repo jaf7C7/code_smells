@@ -1,0 +1,11 @@
+--- a/grades.py
++++ b/grades.py
+@@ -18,7 +18,7 @@
+         self._scores = {}
+ 
+     def add(self, student, score):
+-        if not 0 <= score <= 100:
++        if not 0 <= score < 100:
+             raise ValueError(f"Score must be between 0 and 100, not {score}")
+         self._scores[student] = score
+ 

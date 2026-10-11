@@ -1,0 +1,8 @@
+--- a/thermostat.js
++++ b/thermostat.js
+@@ -1,4 +1,4 @@
+-const MODES = ['heat', 'cool', 'off'];
++const MODES = ['heat', 'cool', 'off', 'turbo'];
+ const HYSTERESIS = 0.5;
+ const MAX_TARGET = 30;
+ 

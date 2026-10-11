@@ -1,0 +1,11 @@
+--- a/staff.js
++++ b/staff.js
+@@ -18,7 +18,7 @@
+     shelf._items.forEach((count) => {
+       used += count;
+     });
+-    if (used + quantity > shelf._capacity) {
++    if (used + quantity >= shelf._capacity) {
+       throw new Error(`Shelf ${shelf.id} has room for ${shelf._capacity - used} more`);
+     }
+     shelf._items.set(sku, (shelf._items.get(sku) || 0) + quantity);

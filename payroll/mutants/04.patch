@@ -1,0 +1,11 @@
+--- a/payroll.py
++++ b/payroll.py
+@@ -17,7 +17,7 @@
+ 
+     pension = 0
+     if employee["pension_opt_in"]:
+-        pension = gross * 0.05
++        pension = gross * 0.06
+ 
+     student_loan = 0
+     if employee["student_loan"]:

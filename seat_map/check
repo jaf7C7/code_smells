@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# Runs the test suite against the real code a few times, then against each
+# patch in mutants/ (each patch introduces one bug into the production code).
+#
+# Passes when the real code is green on every run and every mutant turns at
+# least one test red. A mutant that no longer applies (because you have
+# restructured the code it patches) is reported and skipped.
+set -u
+
+here="$(cd "$(dirname "$0")" && pwd)"
+runs=3
+
+if [ -f "$here/package.json" ]; then
+  test_cmd=("$here/node_modules/.bin/jest" --silent)
+else
+  test_cmd=("$here/.venv/bin/python" -m pytest -q -p no:cacheprovider)
+fi
+
+copy_to() {
+  tar -C "$here" --exclude=./.venv --exclude=./node_modules --exclude=./.git \
+      --exclude=./mutants -cf - . | tar -C "$1" -xf -
+}
+
+run_suite() {
+  (cd "$1" && "${test_cmd[@]}") >/dev/null 2>&1
+}
+
+failed=0
+
+work="$(mktemp -d)"
+trap 'rm -rf "$work"' EXIT
+
+copy_to "$work"
+for i in $(seq "$runs"); do
+  if run_suite "$work"; then
+    echo "real code, run $i/$runs: pass"
+  else
+    echo "real code, run $i/$runs: FAIL"
+    failed=1
+  fi
+done
+
+skipped=0
+for m in "$here"/mutants/*.patch; do
+  name="$(basename "$m")"
+  dir="$work/$name"
+  mkdir "$dir"
+  copy_to "$dir"
+  if ! patch -p1 -s -f --dry-run -d "$dir" < "$m" >/dev/null 2>&1; then
+    echo "mutant $name: no longer applies (skipped)"
+    skipped=$((skipped + 1))
+    continue
+  fi
+  patch -p1 -s -f --no-backup-if-mismatch -d "$dir" < "$m" >/dev/null
+  if run_suite "$dir"; then
+    echo "mutant $name: SURVIVED (no test caught this bug)"
+    failed=1
+  else
+    echo "mutant $name: killed"
+  fi
+done
+
+echo
+if [ "$failed" -ne 0 ]; then
+  echo "CHECK FAILED"
+  exit 1
+fi
+[ "$skipped" -ne 0 ] && echo "($skipped mutant(s) skipped)"
+echo "CHECK PASSED"

@@ -1,0 +1,11 @@
+--- a/directory.js
++++ b/directory.js
+@@ -65,7 +65,7 @@
+ 
+ function worksInSameBuildingAsManager(employee) {
+   return (
+-    employee.getOffice().getBuilding().getName() ===
++    employee.getDepartment().getHead().getOffice().getBuilding().getName() ===
+     employee.getDepartment().getHead().getOffice().getBuilding().getName()
+   );
+ }

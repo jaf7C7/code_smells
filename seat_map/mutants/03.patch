@@ -1,0 +1,12 @@
+--- a/seats.js
++++ b/seats.js
+@@ -24,9 +24,6 @@
+     if (!this.allSeats().includes(label)) {
+       throw new Error(`No seat ${label}`);
+     }
+-    if (this.booked.has(label)) {
+-      return false;
+-    }
+     this.booked.add(label);
+     return true;
+   }

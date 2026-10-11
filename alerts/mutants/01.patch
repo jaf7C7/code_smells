@@ -1,0 +1,11 @@
+--- a/channels.js
++++ b/channels.js
+@@ -14,7 +14,7 @@
+   }
+ 
+   dispatch({ number, text }) {
+-    if (text.length > 160) {
++    if (text.length > 140) {
+       throw new Error('SMS messages are limited to 160 characters');
+     }
+     this.messages.push({ number, text });

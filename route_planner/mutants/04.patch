@@ -1,0 +1,11 @@
+--- a/planner.py
++++ b/planner.py
+@@ -20,7 +20,7 @@
+         return abs(stop[0] - self._current[0]) + abs(stop[1] - self._current[1])
+ 
+     def total_distance(self, route):
+-        points = [self.depot, *route, self.depot]
++        points = [self.depot, *route]
+         return sum(
+             abs(b[0] - a[0]) + abs(b[1] - a[1])
+             for a, b in zip(points, points[1:])

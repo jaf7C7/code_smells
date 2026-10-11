@@ -1,0 +1,9 @@
+--- a/gym.py
++++ b/gym.py
+@@ -22,5 +22,5 @@
+         extra_visits = max(member.visits_this_month - member.included_visits, 0)
+         charge = member.monthly_fee + extra_visits * member.extra_visit_fee
+         if (today - member.joined).days >= 3 * 365:
+-            charge *= 0.9
++            charge *= 0.95
+         return round(charge * (1 + self.vat_rate), 2)

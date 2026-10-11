@@ -1,0 +1,11 @@
+--- a/discounts.js
++++ b/discounts.js
+@@ -7,7 +7,7 @@
+ 
+ function isWeekend(date) {
+   const day = date.getUTCDay();
+-  return day === 0 || day === 6;
++  return day === 0;
+ }
+ 
+ function discountFor(customer) {

@@ -1,0 +1,11 @@
+--- a/importer.js
++++ b/importer.js
+@@ -15,7 +15,7 @@
+   rows() {
+     return this.lines.map((line) => {
+       const values = line.split(',').map((value) => value.trim());
+-      return Object.fromEntries(this.columns.map((column, i) => [column, values[i]]));
++      return Object.fromEntries(this.columns.map((column, i) => [column, values[0]]));
+     });
+   }
+ 

@@ -1,0 +1,11 @@
+--- a/library.py
++++ b/library.py
+@@ -22,7 +22,7 @@
+ 
+     def search(self, text):
+         return sorted(
+-            book["title"] for book in self.books.values() if text.lower() in book["title"].lower()
++            book["title"] for book in self.books.values() if text in book["title"]
+         )
+ 
+     def available_copies(self, isbn):

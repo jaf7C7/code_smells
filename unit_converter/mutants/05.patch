@@ -1,0 +1,11 @@
+--- a/units.py
++++ b/units.py
+@@ -13,7 +13,7 @@
+ def format_height(metres):
+     total_feet = FEET_PER_METRE.apply(metres)
+     feet = int(total_feet)
+-    inches = round((total_feet - feet) * 12)
++    inches = int((total_feet - feet) * 12)
+     if inches == 12:
+         feet += 1
+         inches = 0

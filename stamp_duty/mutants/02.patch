@@ -1,0 +1,11 @@
+--- a/duty.py
++++ b/duty.py
+@@ -15,7 +15,7 @@
+     # check whether the buyer gets first-time relief: they must never
+     # have owned a property before, and the property must not cost
+     # more than 500k
+-    if not buyer["owned_before"] and price <= 500_000:
++    if price <= 500_000:
+         bands = FIRST_TIME_BANDS
+     else:
+         bands = STANDARD_BANDS

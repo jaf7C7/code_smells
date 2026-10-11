@@ -1,0 +1,11 @@
+--- a/collection.js
++++ b/collection.js
+@@ -8,7 +8,7 @@
+   }
+ 
+   remove(id) {
+-    this.items = this.items.filter((item) => item.id !== id);
++    this.items = this.items.filter((item) => item.id === id);
+   }
+ 
+   clear() {

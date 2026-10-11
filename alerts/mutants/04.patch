@@ -1,0 +1,11 @@
+--- a/channels.js
++++ b/channels.js
+@@ -4,7 +4,7 @@
+   }
+ 
+   sendEmail(address, subject, body) {
+-    this.sent.push({ address, subject, body });
++    this.sent.push({ address, subject: body, body });
+   }
+ }
+ 

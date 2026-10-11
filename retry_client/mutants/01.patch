@@ -1,0 +1,11 @@
+--- a/retry.py
++++ b/retry.py
+@@ -8,7 +8,7 @@
+ def call_with_retry(operation, attempts=3, base_delay=0.5):
+     for attempt in range(attempts):
+         try:
+-            return operation()
++            operation()
+         except ConnectionError as error:
+             last_error = error
+             if attempt < attempts - 1:

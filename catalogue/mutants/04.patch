@@ -1,0 +1,11 @@
+--- a/collection.js
++++ b/collection.js
+@@ -20,7 +20,7 @@
+   }
+ 
+   count() {
+-    return this.items.length;
++    return this.items.length - 1;
+   }
+ }
+ 

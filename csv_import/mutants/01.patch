@@ -1,0 +1,11 @@
+--- a/importer.js
++++ b/importer.js
+@@ -5,7 +5,7 @@
+   }
+ 
+   load(text) {
+-    this.lines = text.trim().split('\n');
++    this.lines = text.split('\n');
+   }
+ 
+   readHeader() {

@@ -1,0 +1,11 @@
+--- a/collection.js
++++ b/collection.js
+@@ -38,7 +38,7 @@
+   }
+ 
+   oldest() {
+-    return this.items.reduce((oldest, item) => (item.year < oldest.year ? item : oldest));
++    return this.items.reduce((oldest, item) => (item.year > oldest.year ? item : oldest));
+   }
+ }
+ 

@@ -1,0 +1,11 @@
+--- a/discounts.js
++++ b/discounts.js
+@@ -21,7 +21,7 @@
+   if (customer.member) {
+     return 0.05;
+   }
+-  return 0;
++  return 0.05;
+ }
+ 
+ function priceFor(customer, amount) {

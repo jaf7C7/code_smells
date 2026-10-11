@@ -1,0 +1,11 @@
+--- a/thermostat.js
++++ b/thermostat.js
+@@ -11,7 +11,7 @@
+     throw new Error(`Unknown mode: ${mode}`);
+   }
+   if (mode === 'off') {
+-    return 'idle';
++    return 'heating';
+   }
+   if (mode === 'heat') {
+     return current < target - HYSTERESIS ? 'heating' : 'idle';

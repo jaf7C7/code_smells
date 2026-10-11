@@ -1,0 +1,10 @@
+--- a/oncall.js
++++ b/oncall.js
+@@ -1,6 +1,6 @@
+ function alertOnCall(engineer, incident, emailClient, smsGateway) {
+   const headline = `[${incident.severity}] ${incident.title}`;
+-  if (engineer.prefers === 'sms') {
++  if (engineer.prefers === 'SMS') {
+     smsGateway.dispatch({ number: engineer.phone, text: headline });
+   } else {
+     emailClient.sendEmail(engineer.email, headline, incident.details);

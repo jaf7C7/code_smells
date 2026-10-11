@@ -1,0 +1,11 @@
+--- a/contacts.py
++++ b/contacts.py
+@@ -32,7 +32,7 @@
+         target = normalise_phone(phone)
+         for name, stored in self._entries.items():
+             if normalise_phone(stored) == target:
+-                return name
++                return stored
+         return None
+ 
+     def mobiles(self):

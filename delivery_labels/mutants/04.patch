@@ -1,0 +1,11 @@
+--- a/labels.js
++++ b/labels.js
+@@ -7,7 +7,7 @@
+ }
+ 
+ function formatLabel(recipient, street, city, postcode) {
+-  return [recipient, street, `${city} ${postcode.toUpperCase()}`].join('\n');
++  return [recipient, street, `${city} ${postcode.toUpperCase()}`].join(', ');
+ }
+ 
+ function deliveryLabel(order) {

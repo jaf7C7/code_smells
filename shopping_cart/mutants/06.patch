@@ -1,0 +1,11 @@
+--- a/cart.js
++++ b/cart.js
+@@ -6,7 +6,7 @@
+     this.discount = 0;
+   }
+ 
+-  add(name, unitPrice, quantity = 1) {
++  add(name, unitPrice, quantity = 2) {
+     const line = this.lines.get(name);
+     if (line) {
+       line.quantity += quantity;

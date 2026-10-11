@@ -1,0 +1,11 @@
+--- a/newsletter.py
++++ b/newsletter.py
+@@ -3,7 +3,7 @@
+         items = "".join(f"<li><a href=\"{url}\">{title}</a></li>" for title, url in issue["links"])
+         return f"<h1>{issue['title']}</h1>\n<p>{issue['intro']}</p>\n<ul>{items}</ul>"
+     items = "\n".join(f"- {title}: {url}" for title, url in issue["links"])
+-    return f"{issue['title'].upper()}\n\n{issue['intro']}\n\n{items}"
++    return f"{issue['title']}\n\n{issue['intro']}\n\n{items}"
+ 
+ 
+ def send(issue, subscribers, preview, outbox):

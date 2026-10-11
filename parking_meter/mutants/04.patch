@@ -1,0 +1,11 @@
+--- a/tariff.py
++++ b/tariff.py
+@@ -10,7 +10,7 @@
+         self.daily_cap = daily_cap
+ 
+     def charge(self, minutes, blue_badge=False):
+-        if blue_badge or minutes <= GRACE_MINUTES:
++        if minutes <= GRACE_MINUTES:
+             return 0
+         hours = math.ceil(minutes / 60)
+         cost = self.first_hour + (hours - 1) * self.extra_hour

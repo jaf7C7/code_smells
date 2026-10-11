@@ -1,0 +1,11 @@
+--- a/notifier.js
++++ b/notifier.js
+@@ -28,7 +28,7 @@
+ 
+   deliver(message) {
+     this.outbox.push({ to: message.recipient.email, body: message.text });
+-    return { channel: 'email', to: message.recipient.email };
++    return { channel: 'sms', to: message.recipient.email };
+   }
+ }
+ 

@@ -1,0 +1,8 @@
+--- a/zoo.py
++++ b/zoo.py
+@@ -41,4 +41,4 @@
+ def keeper_sheet(animal):
+     low, high = enclosure_temperature_c(animal)
+     times = ", ".join(feeding_times(animal))
+-    return f"{animal.name}: {daily_food_kg(animal)} kg at {times}; keep {low}-{high}°C"
++    return f"{animal.name}: {daily_food_kg(animal)} kg at {times}; keep {high}-{low}°C"

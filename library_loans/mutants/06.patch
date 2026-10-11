@@ -1,0 +1,8 @@
+--- a/library.py
++++ b/library.py
+@@ -60,4 +60,4 @@
+ 
+     def most_borrowed(self, count):
+         ranked = sorted(self.times_borrowed.items(), key=lambda item: (-item[1], item[0]))
+-        return [self.books[isbn]["title"] for isbn, times in ranked[:count] if times > 0]
++        return [self.books[isbn]["title"] for isbn, times in ranked[:count] ]

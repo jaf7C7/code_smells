@@ -1,0 +1,11 @@
+--- a/reception.py
++++ b/reception.py
+@@ -6,7 +6,7 @@
+         self._calendar = Calendar()
+ 
+     def book(self, day, hour, who):
+-        return self._calendar.book(day, hour, who)
++        return self._calendar.book(day, hour + 1, who)
+ 
+     def cancel(self, day, hour):
+         return self._calendar.cancel(day, hour)

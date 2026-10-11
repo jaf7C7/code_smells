@@ -1,0 +1,11 @@
+--- a/worker.js
++++ b/worker.js
+@@ -11,7 +11,7 @@
+   }
+ 
+   async run(jobs) {
+-    for (const job of jobs) {
++    for (const job of jobs.slice(1)) {
+       await this.latency();
+       try {
+         await this.handler(job);

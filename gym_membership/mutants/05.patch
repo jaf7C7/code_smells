@@ -1,0 +1,11 @@
+--- a/gym.py
++++ b/gym.py
+@@ -8,7 +8,7 @@
+         self.visits_this_month = 0
+ 
+     def record_visit(self):
+-        self.visits_this_month += 1
++        self.visits_this_month += 2
+ 
+     def start_new_month(self):
+         self.visits_this_month = 0

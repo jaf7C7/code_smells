@@ -1,0 +1,8 @@
+--- a/reports.py
++++ b/reports.py
+@@ -10,4 +10,4 @@
+ 
+ 
+ def cancel_all():
+-    printing.pending.clear()
++    printing.completed.clear()

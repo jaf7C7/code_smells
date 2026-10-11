@@ -1,0 +1,8 @@
+--- a/duty.py
++++ b/duty.py
+@@ -38,4 +38,4 @@
+         tax += price * 0.03
+ 
+     # round down to the pound
+-    return int(tax)
++    return round(tax)

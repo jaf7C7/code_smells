@@ -1,0 +1,8 @@
+--- a/tariff.py
++++ b/tariff.py
+@@ -14,4 +14,4 @@
+             return 0
+         hours = math.ceil(minutes / 60)
+         cost = self.first_hour + (hours - 1) * self.extra_hour
+-        return round(min(cost, self.daily_cap), 2)
++        return round(max(cost, self.daily_cap), 2)

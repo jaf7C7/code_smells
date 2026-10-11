@@ -1,0 +1,11 @@
+--- a/settings.py
++++ b/settings.py
+@@ -18,7 +18,7 @@
+         interval = timedelta(minutes=int(settings["interval_minutes"]))
+     except Exception:
+         interval = timedelta(minutes=DEFAULTS["interval_minutes"])
+-    return last_run + interval
++    return last_run + interval * 2
+ 
+ 
+ def backups_to_delete(backups, settings):

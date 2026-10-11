@@ -1,0 +1,11 @@
+--- a/importer.js
++++ b/importer.js
+@@ -9,7 +9,7 @@
+   }
+ 
+   readHeader() {
+-    this.columns = this.lines.shift().split(',').map((column) => column.trim());
++    this.columns = this.lines.pop().split(',').map((column) => column.trim());
+   }
+ 
+   rows() {

@@ -1,0 +1,11 @@
+--- a/units.py
++++ b/units.py
+@@ -14,7 +14,7 @@
+     total_feet = FEET_PER_METRE.apply(metres)
+     feet = int(total_feet)
+     inches = round((total_feet - feet) * 12)
+-    if inches == 12:
++    if inches == 13:
+         feet += 1
+         inches = 0
+     return f"{feet}' {inches}\""

@@ -1,0 +1,11 @@
+--- a/playlist.js
++++ b/playlist.js
+@@ -22,7 +22,7 @@
+   }
+ 
+   byLength() {
+-    return this.tracks.sort((a, b) => a.seconds - b.seconds);
++    return this.tracks.sort((a, b) => b.seconds - a.seconds);
+   }
+ 
+   duration() {

@@ -1,0 +1,11 @@
+--- a/settings.py
++++ b/settings.py
+@@ -15,7 +15,7 @@
+ 
+ def next_run(last_run, settings):
+     try:
+-        interval = timedelta(minutes=int(settings["interval_minutes"]))
++        interval = timedelta(minutes=int(settings["interval"]))
+     except Exception:
+         interval = timedelta(minutes=DEFAULTS["interval_minutes"])
+     return last_run + interval

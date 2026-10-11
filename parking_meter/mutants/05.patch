@@ -1,0 +1,9 @@
+--- a/tariff.py
++++ b/tariff.py
+@@ -13,5 +13,5 @@
+         if blue_badge or minutes <= GRACE_MINUTES:
+             return 0
+         hours = math.ceil(minutes / 60)
+-        cost = self.first_hour + (hours - 1) * self.extra_hour
++        cost = self.first_hour + hours * self.extra_hour
+         return round(min(cost, self.daily_cap), 2)

@@ -1,0 +1,11 @@
+--- a/thermostat.js
++++ b/thermostat.js
+@@ -17,7 +17,7 @@
+     return current < target - HYSTERESIS ? 'heating' : 'idle';
+   }
+   if (mode === 'cool') {
+-    return current > target + HYSTERESIS ? 'cooling' : 'idle';
++    return current > target - HYSTERESIS ? 'cooling' : 'idle';
+   }
+   if (mode === 'eco') {
+     return current < target - 2 ? 'heating' : 'idle';

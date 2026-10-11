@@ -1,0 +1,11 @@
+--- a/cart.js
++++ b/cart.js
+@@ -21,7 +21,7 @@
+       throw new Error(`${name} is not in the cart`);
+     }
+     line.quantity -= quantity;
+-    if (line.quantity <= 0) {
++    if (line.quantity < 0) {
+       this.lines.delete(name);
+     }
+   }

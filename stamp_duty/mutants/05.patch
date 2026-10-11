@@ -1,0 +1,11 @@
+--- a/duty.py
++++ b/duty.py
+@@ -29,7 +29,7 @@
+         # stop once we're past the price
+         if price <= lower:
+             break
+-        tax += (min(price, upper) - lower) * rate
++        tax += (price - lower) * rate
+         lower = upper
+ 
+     # people buying an additional property pay an extra 3% of the

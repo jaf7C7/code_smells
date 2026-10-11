@@ -1,0 +1,11 @@
+--- a/worker.js
++++ b/worker.js
+@@ -15,7 +15,7 @@
+       await this.latency();
+       try {
+         await this.handler(job);
+-        this.done.push(job.id);
++        this.done.push(job);
+       } catch (error) {
+         this.failed.push({ id: job.id, reason: error.message });
+       }

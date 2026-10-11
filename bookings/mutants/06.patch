@@ -1,0 +1,11 @@
+--- a/calendar_slots.py
++++ b/calendar_slots.py
+@@ -13,7 +13,7 @@
+         del self._slots[(day, hour)]
+ 
+     def who_has(self, day, hour):
+-        return self._slots.get((day, hour))
++        return self._slots.get((day, hour), "")
+ 
+     def free_hours(self, day, opening, closing):
+         return [hour for hour in range(opening, closing) if (day, hour) not in self._slots]

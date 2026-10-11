@@ -1,0 +1,11 @@
+--- a/receipt.py
++++ b/receipt.py
+@@ -11,7 +11,7 @@
+         subtotal += line_total
+         lines.append(f"  {item['qty']} x {item['name']:<16} £{line_total:>7.2f}")
+     discount = subtotal * MEMBER_DISCOUNT if order["member"] else 0
+-    delivery = 0 if subtotal >= FREE_DELIVERY_FROM else DELIVERY_CHARGE
++    delivery = 0 if subtotal > FREE_DELIVERY_FROM else DELIVERY_CHARGE
+     lines.append("")
+     if discount:
+         lines.append(f"  {'Member discount':<20}-£{discount:>7.2f}")

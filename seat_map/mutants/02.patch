@@ -1,0 +1,11 @@
+--- a/seats.js
++++ b/seats.js
+@@ -13,7 +13,7 @@
+   allSeats() {
+     const labels = [];
+     for (let row = 0; row < this.rows; row++) {
+-      for (let seat = 1; seat <= this.seatsPerRow; seat++) {
++      for (let seat = 1; seat < this.seatsPerRow; seat++) {
+         labels.push(this.label(row, seat));
+       }
+     }

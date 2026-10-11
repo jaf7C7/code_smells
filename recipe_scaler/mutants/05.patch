@@ -1,0 +1,11 @@
+--- a/scaler.js
++++ b/scaler.js
+@@ -19,7 +19,7 @@
+   for (const recipe of recipes) {
+     for (const { name, quantity, unit } of recipe.ingredients) {
+       const key = `${name} (${unit})`;
+-      totals.set(key, (totals.get(key) || 0) + quantity);
++      totals.set(key, quantity);
+     }
+   }
+   return [...totals.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([key, quantity]) => `${key}: ${quantity}`);

@@ -1,0 +1,11 @@
+--- a/library.py
++++ b/library.py
+@@ -49,7 +49,7 @@
+         return self.fines[member_id]
+ 
+     def pay_fine(self, member_id, amount):
+-        self.fines[member_id] = max(self.fines[member_id] - amount, 0.0)
++        self.fines[member_id] = self.fines[member_id] - amount
+ 
+     def send_overdue_reminders(self, today):
+         for loan in self.loans:

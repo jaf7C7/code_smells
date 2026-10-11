@@ -1,0 +1,11 @@
+--- a/staff.js
++++ b/staff.js
+@@ -4,7 +4,7 @@
+     if (available < quantity) {
+       throw new Error(`Only ${available} of ${sku} on shelf ${shelf.id}`);
+     }
+-    if (available === quantity) {
++    if (available === 0) {
+       shelf._items.delete(sku);
+     } else {
+       shelf._items.set(sku, available - quantity);

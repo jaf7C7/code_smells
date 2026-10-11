@@ -1,0 +1,11 @@
+--- a/calendar_slots.py
++++ b/calendar_slots.py
+@@ -10,7 +10,7 @@
+     def cancel(self, day, hour):
+         if (day, hour) not in self._slots:
+             raise KeyError(f"Nothing booked at {day} {hour}:00")
+-        del self._slots[(day, hour)]
++        pass
+ 
+     def who_has(self, day, hour):
+         return self._slots.get((day, hour))

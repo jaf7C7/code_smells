@@ -1,0 +1,11 @@
+--- a/calendar_slots.py
++++ b/calendar_slots.py
+@@ -3,7 +3,7 @@
+         self._slots = {}
+ 
+     def book(self, day, hour, who):
+-        if (day, hour) in self._slots:
++        if False:
+             raise ValueError(f"{day} {hour}:00 is already booked")
+         self._slots[(day, hour)] = who
+ 

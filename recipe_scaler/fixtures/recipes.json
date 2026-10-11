@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Pancakes",
+    "serves": 4,
+    "ingredients": [
+      { "name": "flour", "quantity": 100, "unit": "g" },
+      { "name": "milk", "quantity": 300, "unit": "ml" },
+      { "name": "egg", "quantity": 2, "unit": "whole" }
+    ]
+  },
+  {
+    "name": "Omelette",
+    "serves": 1,
+    "ingredients": [
+      { "name": "egg", "quantity": 3, "unit": "whole" },
+      { "name": "butter", "quantity": 10, "unit": "g" }
+    ]
+  },
+  {
+    "name": "Porridge",
+    "serves": 2,
+    "ingredients": [
+      { "name": "oats", "quantity": 80, "unit": "g" },
+      { "name": "milk", "quantity": 150, "unit": "ml" },
+      { "name": "salt", "quantity": 0.5, "unit": "tsp" }
+    ]
+  },
+  {
+    "name": "Yorkshire puddings",
+    "serves": 6,
+    "ingredients": [
+      { "name": "flour", "quantity": 140, "unit": "g" },
+      { "name": "egg", "quantity": 4, "unit": "whole" },
+      { "name": "milk", "quantity": 200, "unit": "ml" }
+    ]
+  }
+]

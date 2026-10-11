@@ -1,0 +1,10 @@
+--- a/cart.js
++++ b/cart.js
+@@ -44,7 +44,6 @@
+ 
+   clear() {
+     this.lines.clear();
+-    this.discount = 0;
+   }
+ }
+ 

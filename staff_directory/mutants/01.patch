@@ -1,0 +1,11 @@
+--- a/directory.js
++++ b/directory.js
+@@ -56,7 +56,7 @@
+ }
+ 
+ function managerMailingAddress(employee) {
+-  return employee.getDepartment().getHead().getOffice().getBuilding().getAddress();
++  return employee.getDepartment().getHead().getOffice().getBuilding().getName();
+ }
+ 
+ function managerFloor(employee) {

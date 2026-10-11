@@ -1,0 +1,11 @@
+--- a/tickets.js
++++ b/tickets.js
+@@ -9,7 +9,7 @@
+   if (unitPrice === undefined) {
+     throw new Error(`Unknown section: ${section}`);
+   }
+-  const discount = PROMO_DISCOUNTS[promoCode] ?? 0;
++  const discount = PROMO_DISCOUNTS[promoCode] ?? 0.1;
+   const ticketsTotal = unitPrice * quantity * (1 - discount);
+   const insuranceTotal = insured ? 2.5 * quantity : 0;
+   return {

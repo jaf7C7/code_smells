@@ -1,0 +1,11 @@
+--- a/staff.js
++++ b/staff.js
+@@ -1,7 +1,7 @@
+ class Picker {
+   pick(shelf, sku, quantity) {
+     const available = shelf._items.get(sku) || 0;
+-    if (available < quantity) {
++    if (available <= quantity) {
+       throw new Error(`Only ${available} of ${sku} on shelf ${shelf.id}`);
+     }
+     if (available === quantity) {

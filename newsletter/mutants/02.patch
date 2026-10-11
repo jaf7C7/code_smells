@@ -1,0 +1,11 @@
+--- a/newsletter.py
++++ b/newsletter.py
+@@ -8,7 +8,7 @@
+ 
+ def send(issue, subscribers, preview, outbox):
+     if preview:
+-        recipients = [subscriber for subscriber in subscribers if subscriber["editor"]]
++        recipients = [subscriber for subscriber in subscribers if not subscriber["editor"]]
+         subject = f"[PREVIEW] {issue['title']}"
+     else:
+         recipients = subscribers
