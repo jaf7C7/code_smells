@@ -1,6 +1,6 @@
 [submodule "currency_display"]
 	path = currency_display
-	url = ./currency_display/.git
+	url = ../code_smells-currency_display.git
 [submodule "report_export"]
 	path = report_export
-	url = ./report_export/.git
+	url = ../code_smells-report_export.git
