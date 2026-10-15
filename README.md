@@ -2,7 +2,7 @@
 
 Each directory here is a small, self-contained Python or JavaScript
 project that exhibits **exactly one** code smell from
-[`../smells_abridged.txt`](../smells_abridged.txt). Everything else in
+[`./smells.md`](./smells.md). Everything else in
 it is meant to be clean. Your job:
 
 1. **Identify** the smell -- by name, where it is, and why it qualifies.
